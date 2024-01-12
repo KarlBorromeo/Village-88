@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+            }
+            #world{
+
+            }
+            div.row{
+                width: 100%;
+                /* border: 1px solid red; */
+                display: flex;
+            }
+            div.row div{
+                display: inline-block;
+                width: 45px;       
+                height: 45px;
+                /* border: 1px solid black; */
+            }
+            div.row .bricks{
+                background-color: blue;
+            }
+            div.row .money{
+                background-image: url('./img/money.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .pacman{
+                position: absolute;
+                width: 45px;
+                height: 45px;;
+                background-image: url('./img/pacman-right.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .results{
+                border: 1px solid white;
+                background-color: rgba(255, 255, 255, 0.7);
+                border-radius: 5px;
+                padding: .5rem;
+                position: absolute;
+                top: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            h4{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="world">
+        </div>
+
+
+        <!-- 
+            1. draw map using javascript done!
+            2. make functions for character done!
+            3. make no passing wall done!
+            4. erase if money eaten done!
+            5. make score records done!
+
+        -->
+        <script type="text/javascript">
+            const array = [
+                [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+                [2,0,1,1,1,1,1,2,2,1,2,1,1,1,1,1,2,1,1,2],
+                [2,1,1,2,2,2,1,1,1,1,1,1,1,2,1,1,2,1,1,2],
+                [2,1,2,2,1,1,2,2,2,1,2,2,1,2,1,1,2,1,1,2],
+                [2,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,2],
+                [2,2,2,2,2,1,1,1,1,2,2,2,2,2,2,1,2,2,1,2],
+                [2,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,2],
+                [2,1,2,2,1,2,1,2,1,2,2,2,2,2,2,2,1,2,1,2],
+                [2,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,2,1,2],
+                [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+            ];
+            let world = "";
+            let pacmanPos = {
+                x:1, //row
+                y:1, //column
+            }
+            let total = 0
+            let direction = "right";
+
+            for(let i=0; i<array.length; i++){
+                    world += "<div class='row'>"
+                for(let j=0; j<array[i].length; j++){
+
+                    if(array[i][j] == 2){
+                        world += "<div class='bricks'></div>"
+                    }else if(array[i][j] == 1){
+                        world += "<div class='money'></div>"
+                    }else{
+                        world += "<div class='none'></div>"
+                    }
+                }
+                world += "</div>"
+            }
+            world += "<div class='pacman' id='pacman'></div>"                
+            world += "<div class='results' id='results'><h4>Results</h4></div>"                
+            // add all tags on DOM
+            document.getElementById('world').innerHTML += world
+
+
+            const results = document.getElementById('results')
+            const pacman = document.getElementById('pacman')
+            function moveNow(){
+                pacman.style.top = pacmanPos.x * 45 + 'px'
+                pacman.style.left = pacmanPos.y * 45 + 'px'
+                pacman.style.backgroundImage = `url('img/pacman-${direction}.png')`
+            }
+
+            moveNow()
+
+            function updateEatMoneyVertical(nextPosRow,nextPosColumn){ //erase the class money in next position
+                const nextPosition = array[nextPosRow][nextPosColumn]
+                if(nextPosition == 1){ //test if destination position is class "money"
+                    console.log('have money')
+                    const nextRowElement = document.getElementsByClassName('row')[nextPosRow] //get the row element
+                    const listRowChildrenElements = nextRowElement.children //get the list of the children of row
+                    const targetElement = listRowChildrenElements[nextPosColumn] //select the specific column element
+                    
+                    if(targetElement.className == 'money'){
+                        targetElement.classList.remove('money') //erase the classname money
+                        total+=500;
+                        results.textContent = 'Results : ' + total                        
+                    }
+
+                }
+            }
+
+            document.onkeydown = function(e){
+                if(e.keyCode == 38 && array[pacmanPos.x-1][pacmanPos.y] != 2){ // move top  
+                    updateEatMoneyVertical(pacmanPos.x-1,pacmanPos.y)
+                    pacmanPos.x--
+                    direction = 'up'
+                }else if(e.keyCode == 40 && array[pacmanPos.x+1][pacmanPos.y] != 2){ // move down
+                    updateEatMoneyVertical(pacmanPos.x+1,pacmanPos.y)
+                    pacmanPos.x++;
+                    direction = 'down'
+                }else if(e.keyCode == 37 && array[pacmanPos.x][pacmanPos.y-1] != 2){ // move left
+                    updateEatMoneyVertical(pacmanPos.x,pacmanPos.y-1)
+                    pacmanPos.y--; 
+                    direction = 'left'
+                }else if(e.keyCode == 39 && array[pacmanPos.x][pacmanPos.y+1] != 2){ // move right
+                    updateEatMoneyVertical(pacmanPos.x,pacmanPos.y+1)
+                    pacmanPos.y++; 
+                    direction = 'right'
+                }
+                moveNow()  
+            }
+
+
+        </script>
+    </body>
+</html>

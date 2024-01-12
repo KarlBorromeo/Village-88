@@ -1,0 +1,17 @@
+1.when using document.getElement.....
+	//you are getting an array of elements if the search has common like class
+
+2.when getting the list of the children of the current element is use .children
+      	//we want to get the list of children and we can do further about this specific child
+	first: we get the parent element example:
+		const parent = document.getElementBy....
+	second: we can get the list via
+		const list = parent.getElementByClassName('sample')
+	//we are getting the list of children that has a class name sample
+
+3.when can update the text of the DOM via .innerHTML or .textContent
+	//example
+		const resultText = document.getElementByID('result')
+		resultText.innerHTML = "Result"+ somenumber
+				or
+		resultText.textContent = "result" somenumber
