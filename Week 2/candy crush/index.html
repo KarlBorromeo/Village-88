@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Candy Crush</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                const images = [
+                './assets/multicolor_candy.png',
+                './assets/orange_candy.png',
+                './assets/red_candy.png',
+                './assets/yellow_candy.png']
+
+                function appendTags(){
+                    //append images to the dom
+                    let tags = "";
+                    let ctr = 0;
+                    for(let i = 0 ; i<12 ; i++){               
+                        let img = images[ctr];
+                        ctr++;
+                        if(ctr>3){
+                            ctr = 0;
+                        }   
+                        tags += `<li><img src="${img}" alt="candy image"></li>`;
+                    }
+                    $('ul').append(tags); 
+                    
+                    //rerender the even listener
+                    $('li').click(function(){                  
+                        $(this).hide();
+                    });
+                }
+                appendTags();
+                $('ul').after(`<button class="btn btn-primary mt-4">Reset Game</button>`);
+
+                //interactions           
+                $('button').click(() => {
+                    $('ul').html('');                   
+                    appendTags();
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <ul class="start">
+        </ul>
+    </body>
+</html>

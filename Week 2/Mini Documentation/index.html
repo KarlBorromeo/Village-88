@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery Introduction</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#click').click(() => alert('You triggered the click() method'));
+                $('#hide').click(() => {
+                                        $('h1').hide()
+                                        alert('You triggered the hide() method cause the H1 to hide')
+                                        });
+                $('#show').click(() => {
+                                        $('h1').show()
+                                        alert('You triggered the show() method cause the H1 to show up')
+                                        });
+                $('#toggle').click(() => {
+                                        $('h1').toggle()
+                                        alert('You triggered the toggle() method cause the H1 to toggle the visibility of it')
+                                        });
+                $('#slideDown').click(() => $('p').slideDown())
+                $('#slideUp').click(() => $('p').slideUp());
+                $('#slideToggle').click(() => $('p').slideToggle());
+                $('#fadeIn').click(() => $('article').fadeIn());
+                $('#fadeOut').click(() => $('article').fadeOut());
+                $('#addClass').click(() => {
+                                        alert('we are adding a class on our buttons to make it color BLUE and PRIMARY color');
+                                        $('button').addClass('btn btn-primary p-1');
+                                        });
+                $('#before').click(() => $('h1').before('<p class="text-light bg-primary">we added paragraph before H1.</p>'));                            
+                $('#after').click(() => $('h1').after('<p class="text-light bg-dark">we added paragraph after H1.</p>'));                            
+                $('#append').click(() => $('h3').append('<span class="btn btn-warning">added inside H3</span>'));                            
+                $('#html').click(() => $('h3').html('We change the content when using .html, either text or tags can be used'));                     
+                $('#attr').click(() => alert($('input').attr('type') + ": is our input type"))                            
+                $('#val').click(() => alert("'" + $('input').val() + "'" + ": is your input value you entered"))                            
+                $('#text').click(() => $('h3').text('You can set a text but cannot be a tag'))                         
+            })
+        </script>
+    </head>
+    <body class="container-md bg-light d-flex justify-content-center">
+        <ul class="col-3 border p-3">
+            <li><a id="click" href="#">.click()</a></li>
+            <li><a id="hide" href="#">.hide()</a></li>
+            <li><a id="show" href="#">.show()</a></li>
+            <li><a id="toggle" href="#">.toggle()</a></li>
+            <li><a id="slideDown" href="#">.slideDown()</a></li>
+            <li><a id="slideUp" href="#">.slideUp()</a></li>
+            <li><a id="slideToggle" href="#">.slideToggle()</a></li>
+            <li><a id="fadeIn" href="#">.fadeIn()</a></li>
+            <li><a id="fadeOut" href="#">.fadeOut()</a></li>
+            <li><a id="addClass" href="#">.addClass()</a></li>
+            <li><a id="before" href="#">.before()</a></li>
+            <li><a id="after" href="#">.after()</a></li>
+            <li><a id="append" href="#">.append()</a></li>
+            <li><a id="html" href="#">.html()</a></li>
+            <li><a id="attr" href="#">.attr()</a></li>
+            <li><a id="val" href="#">.val()</a></li>
+            <li><a id="text" href="#">.text()</a></li>
+        </ul>
+        <article class="col-9 border text-center p-3">
+            <h1 class="m-3">My Mini Documentation</h1>
+            <h3>Click</h3>
+            <section class="d-flex gap-2 border-bottom border-dark pb-2 mb-1 mt-3">
+                <button id="clickBtn" class="col-auto p-0">.click()</button>
+                <p class="col">Binds an event handler to the "click" JavaScript event, or trigger that event on an element. Example: Clicking the button will display alert box.</p>
+            </section>
+            <section class="d-flex gap-2 border-bottom border-dark pb-2 mb-1">
+                <button id="hideBtn" class="col-auto">.hide()</button>
+                <p class="col">Hides the matched elements. Example: Hiding this paragraph</p>
+            </section>
+            <section class="d-flex gap-2 border-bottom border-dark pb-2 mb-1">
+                <button id="showBtn" class="col-auto">.show()</button>
+                <p class="col">Displays the matched elements. Example: Showing the hidden paragraph here.</p>
+            </section> 
+            <section class="border-bottom border-dark pb-2 mb-1">
+                <input type="password" id="password" placeholder="put your password here">
+                <p class="col">Displays the input attributes and values.</p>
+            </section>             
+        </article>
+    </body>
+</html>
