@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Candy Crush</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                let ctr = 0;
+                const images = [
+                './assets/game.png',
+                './assets/multicolor_candy.png',
+                './assets/hat.jpg',
+                './assets/red_candy.png',
+                './assets/yellow_candy.png',
+                './assets/men.jpg',
+                './assets/orange_candy.png',
+                './assets/women.jpg'
+                ];
+                const defaultImage = './assets/default.jpg'
+
+
+
+                function appendTags(){
+                    //append images to the dom
+                    let tags = "";
+                    for(let i = 0 ; i<16 ; i++){                
+                        tags += `<li><img src="${defaultImage}" alt="candy image"></li>`;
+                    }
+                    $('ul').append(tags); 
+                    
+                    //rerender the even listener
+                    $('li').click(function(){                
+                        $(this).find('img').attr({
+                            src: images[ctr]
+                        });
+                        ctr++;
+                        if(ctr == images.length){
+                            ctr=0;
+                        }
+                    });
+                }
+                appendTags();
+                $('ul').after(`<button class="btn btn-primary mt-4">Reset Game</button>`);
+
+                //interactions           
+                $('button').click(() => {
+                    $('ul').html('');                   
+                    appendTags();
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <ul class="start">
+        </ul>
+    </body>
+</html>

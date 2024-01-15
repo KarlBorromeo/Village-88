@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Candy Crush</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                const images = [
+                    './assets/advice1.PNG',
+                    './assets/advice2.PNG',
+                    './assets/advice3.PNG',
+                    './assets/advice4.PNG',
+                    './assets/advice5.PNG',
+                    './assets/advice6.PNG',
+                    './assets/advice7.PNG',
+                    './assets/advice8.PNG',
+                    './assets/advice9.PNG',
+                    './assets/advice10.PNG',
+                    './assets/advice11.PNG',
+                    './assets/advice12.PNG',
+                    './assets/advice13.PNG',
+                    './assets/advice14.PNG',
+                    './assets/advice15.PNG',
+                    './assets/advice16.PNG',
+                    './assets/advice17.PNG',
+                    './assets/advice18.PNG',
+                    './assets/advice19.PNG',
+                    './assets/advice20.PNG',
+                    './assets/advice21.PNG',
+                    './assets/advice22.PNG',
+                    './assets/advice23.PNG',
+                    './assets/advice24.PNG',
+                    './assets/advice25.PNG',
+                    './assets/advice26.PNG',
+                    './assets/advice27.PNG',
+                    './assets/advice28.PNG',
+                    './assets/advice29.PNG',
+                    './assets/advice30.PNG',
+                ];
+                const defaultImage = './assets/cookie.jpg'
+
+                //append images to the dom
+                let tags = "";
+                for(let i = 1 ; i<31 ; i++){                
+                    tags += `<li><img src="${defaultImage}" alt="${i}"></li>`;
+                }
+                $('ul').append(tags); 
+                
+                $('li').on('mouseover', function(){
+                    let altIndex = $(this).find('img').attr('alt')
+                    $(this).find('img').attr({
+                        src: images[--altIndex]
+                    })
+                })
+                $('li').on('mouseleave', function(){
+                    $(this).find('img').attr({
+                        src: defaultImage
+                    })
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h1 class="mt-1">Fortune Cookie</h1>
+        <p class="mb-3"><span>Direction:</span> Close your eyes then point at this page. Open your eyes and follow the advice your mouse pointer lands on.</p>
+        <ul class="start">
+        </ul>
+    </body>
+</html>
