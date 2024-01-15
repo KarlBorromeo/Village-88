@@ -1,0 +1,60 @@
+.container1{
+    background-image: linear-gradient(180deg, rgb(30,63,92),rgb(41,89,128));
+    min-height: 20vh;
+    padding: 2rem 3rem 0;
+}
+    .container1 header{
+        position: relative;
+    }
+        .container1 header section{
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 90%;
+        }
+            .container1 header section span{ 
+                padding-left: 1rem;
+                margin-right: 5.4rem;  
+                right: 0;
+                height: 100%;
+                display: inline-block;
+                background-color: rgb(30,41,51);
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+            }
+            .container1 header section button,
+            .container1 header section input{
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .container1 header section .donate-btn,
+            .container1 header section .go-btn{
+                border-radius: 3px;
+            }
+            .container1 header section .donate-btn{
+                position: absolute;
+                left: -5.5rem;
+                background-color: rgb(255,219,101);
+                padding: .5rem 1rem;
+            }
+            .container1 header section .go-btn{
+                background-image: linear-gradient(180deg, rgb(62,124,176),rgb(45,97,141));
+                padding: .7rem 1rem;
+                margin-right: 1rem;
+            }
+            .container1 header section .socialize-btn{
+                position: absolute;
+                background-color: rgb(30,41,51);
+                padding: .5rem 1rem;
+                height: 100%;
+                border-left: 1px solid rgba(0, 0, 0, 0.4);
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+                color:rgb(112,152,173);
+                font-weight: bold;
+            }
+            .container1 header section input{
+                padding: .6rem;
+            }
+ 

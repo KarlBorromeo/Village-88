@@ -1,0 +1,59 @@
+div.container2{
+    background-color: white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+    div.container2 h2{
+        display: inline-block;
+        font-weight: 200;
+    }
+    div.container2 table{
+        text-align: start;
+    }
+    div.container2 section{
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
+        border-top: .3rem solid rgb(62,124,176);
+        padding: 1rem;
+    }
+        div.container2 section header{
+            text-align: start;
+            position: relative;
+        }
+        div.container2 section header span{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            color: rgb(196, 187, 187);
+        }
+        div.container2 section table{
+            width: 100%;
+        }
+            div.container2 section header,
+            div.container2 section table td{
+                border-bottom: 1px solid rgb(196, 187, 187);
+                padding: .5rem 0;
+            }
+        div.container2 section.news{
+            margin-right: 2rem;
+        }
+            div.container2 section.news a{
+                text-decoration: none;
+                font-weight: 100;
+                color: rgb(62,124,176);
+            }
+        div.container2 section.use td{
+            font-weight: bolder;
+        }
+            div.container2 section.use td p{
+                font-weight: 200;
+                display: inline-block;
+            }
+            div.container2 section.use td span{ 
+                background-color: rgb(196, 187, 187);
+                color: gray;
+                padding: .1rem .2rem;
+            }

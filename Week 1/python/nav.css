@@ -1,0 +1,23 @@
+.container1 ul{
+    margin-top: 1rem;
+    background-image: linear-gradient(180deg, rgb(62,124,176),rgb(45,97,141));
+    border-radius: .4rem;
+    text-align: center;
+    box-shadow: 0 0 2rem .2rem rgb(32,67,97);
+}
+    .container1 ul li{
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: bold;
+        border-right: .1rem solid rgba(0, 0, 0, 0.2);
+    }
+        .container1 ul li a{
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin: .05rem 0;
+            text-decoration: none;
+            color: rgb(209,215,211);
+        }
+        .container1 ul li a#focus-nav{
+            background-color: rgb(42,89,129);
+        }

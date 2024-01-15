@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Can I Use</title>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/test.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- put div as the parent container cause body's background color cant be edited -->
+        <div class="parent-cont">
+            <header class="px-5 d-flex justify-content-between">
+                <ul class="list-unstyled d-flex gap-1">
+                    <li class="py-3"><a href="#" class="text-decoration-none text-light p-3">Home</a></li>
+                    <li class="py-3"><a href="#" class="text-decoration-none text-light p-3">News</a></li>
+                </ul>
+                <ul class="list-unstyled d-flex gap-1">
+                    <li class="py-3"><a href="#" class="text-decoration-none text-light p-3"> Compare browsers</a></li>
+                    <li class="py-3"><a href="#" class="text-decoration-none text-light p-3">About</a></li>
+                </ul>
+            </header>
+            <section class="mx-5 mt-3 text-center p-2 text-light fs-2">
+                Can I use 
+                <span id="underline">es6</span>?
+            </section>
+            <article class="mt-3 mx-5 p-4 row">
+                <span id="hashtag" class="col-auto d-flex align-items-center justify-content-center text-light"><a href="#">#</a></span>
+                <h2 class="mt-3">ECMAScript 2015 (ES6)</h2>
+                <p class="col-6 mt-3">Support for the ECMAScript 2015 specification. Features include Promises, Modules, Classes, Template Literals,
+                    Arrow Functions, Let and Const, Default Parameters, Generators, Destructuring Assignment, Rest & SPread, Map/Set & WeakMap/WeakSet and many more.</p>
+                <div class="container-fluid">
+                    <table class="mt-3 row">
+                        <theader>
+                            <tr class="d-flex gap-1">
+                                <td class="col-1 border border-5 border-dark border-top-0 border-end-0 border-start-0 text-center d-flex justify-content-center align-items-end">IE</td>
+                                <td class="col-1 border border-5 border-dark border-top-0 border-end-0 border-start-0 text-center d-flex justify-content-center align-items-end">Edge</td>
+                                <td class="col-1 border border-5 border-dark border-top-0 border-end-0 border-start-0 text-center d-flex justify-content-center align-items-end">Firefox</td>
+                                <td class="col-1 border border-5 border-dark border-top-0 border-end-0 border-start-0 text-center d-flex justify-content-center align-items-end">Chrome</td>
+                                <td class="col-1 border border-5 border-dark border-top-0 border-end-0 border-start-0 text-center d-flex justify-content-center align-items-end">Safari</td>
+                                <td class="col-1 border border-5 border-dark border-top-0 border-end-0 border-start-0 text-center d-flex justify-content-center align-items-end">Opera</td>
+                                <td class="col-1 border border-5 border-dark border-top-0 border-end-0 border-start-0 text-center d-flex justify-content-center align-items-end">Safari on iOS</td>
+                                <td class="col-1 border border-5 border-dark border-top-0 border-end-0 border-start-0 text-center d-flex justify-content-center align-items-end"> Opera Mini</td>
+                                <td class="col-1 border border-5 border-dark border-top-0 border-end-0 border-start-0 text-center d-flex justify-content-center align-items-end">Android Browser</td>
+                                <td class="col-1 border border-5 border-dark border-top-0 border-end-0 border-start-0 text-center d-flex justify-content-center align-items-end">Opera Mobile</td>
+                                <td class="col-1 border border-5 border-dark border-top-0 border-end-0 border-start-0 text-center d-flex justify-content-center align-items-end">Chrome for Android</td>
+                            </tr>
+                        </theader>
+                        <body>
+                            <tr  class="d-flex gap-1">
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 text-center col-1 fw-light text-light production">12-14</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light notSupported">2-5</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light notSupported">4+20</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light notSupported">3.1-7</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light notSupported">10-12.1</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light notSupported">3.2-6.1</td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 col-1"></td>
+                            </tr>
+                            <tr  class="d-flex gap-1">
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">15-18</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light production">6-53</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light production">21-50</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light production">7.1-9.1</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light production">15-37</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light production">7-9.3</td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 text-center col-1 fw-light text-light notSupported">2.1-4.3</td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 col-1"></td>
+                            </tr>
+                            <tr  class="d-flex gap-1">
+                                <td class=" p-1 text-center col-1 fw-light text-light notSupported">6-10</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">79-96</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">54-95</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">51-96</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">10-15.1</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">38-81</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">10-15.1</td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 text-center col-1 fw-light text-light production">4.4-4.4.4</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light notSupported">12-12.1</td>
+                                <td class=" p-1 col-1"></td>
+                            </tr>
+                            <tr  class="d-flex gap-1">
+                                <td class=" p-1 text-center col-1 fw-light text-light production">11</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">97</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">96</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">97</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">15.2</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">82</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">15.2</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light notSupported">all</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">96</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">64</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">96</td>
+                            </tr>
+                            <tr  class="d-flex gap-1">
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">97-98</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">98-100</td>
+                                <td class=" p-1 text-center col-1 fw-light text-light supported">TP</td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 col-1"></td>
+                                <td class=" p-1 col-1"></td>
+                            </tr>
+                        </body>
+                    </table>                    
+                </div>
+            </article>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>

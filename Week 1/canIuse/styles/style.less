@@ -1,0 +1,58 @@
+// variables
+@bg: '../assets/bg.png';
+@nav-btn-color: #524a3b;
+@header-color: #c84f00;
+@content-color: #f2e9d6;
+@td-color1: #810000;
+@td-color2: #94700c;
+@td-color3: #258533;
+@footer-color: #0e0e0e;
+@dot-border: 1px dotted white;
+
+//styles here
+.parent-cont{
+    background-image: url('@{bg}');
+    background-repeat: repeat;
+}
+header ul li{
+    background-color: @nav-btn-color;
+}
+section{
+    background-color: @header-color;
+}
+#underline{
+    display: inline-block;
+    width: 15rem;
+    border-bottom: 1px solid white;
+}
+article{
+    background-color: @content-color;
+    position: relative;
+}
+    article table{
+        width: 100%;
+    }
+        article table tbody td{
+            margin: .1rem!important;
+        }
+#hashtag{
+    position: absolute;
+    left: -2rem;
+    background-color: @td-color2;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+}
+    #hashtag a{
+        text-decoration: none;
+        color: white;
+    }
+.supported{
+    background-color: @td-color3;
+}
+.notSupported{
+    background-color: @td-color1;
+}
+.production{
+    background-color: @td-color2;
+}

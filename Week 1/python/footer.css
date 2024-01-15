@@ -1,0 +1,22 @@
+footer{
+    text-align: center;
+    padding: 2rem;
+    background-image: linear-gradient(180deg, rgb(30,63,92),rgb(41,89,128));
+    color: rgb(209,215,211);
+    font-weight: bold;
+}
+    footer ul{
+        list-style: none;
+        margin-bottom: 2rem;
+    }
+        footer ul li{
+            display: inline-block;
+            margin-right: 1rem;
+        }
+    footer p{
+        font-weight: 300;
+        font-size: x-small;
+    }
+        footer p span{
+            border-bottom: 1px dotted rgb(209,215,211);
+        }

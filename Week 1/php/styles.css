@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 10px;
+}
+header,
+main {
+  margin: auto;
+  width: 970px;
+}
+/* main header styles */
+header {
+  height: 40px;
+  padding: 0 40px;
+  background-color: #bd92e5;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 3px solid #9057c5;
+}
+header form,
+header ul,
+header ul li,
+header ul li img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+header ul li {
+  margin: 0 2px;
+  padding: 0 5px;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+  line-height: 40px;
+}
+header ul li img {
+  transform: translateY(50%);
+  height: 20px;
+}
+header ul li#documentation {
+  background-color: #9057c5;
+}
+header input {
+  margin-left: 100px;
+  transform: translateY(50%);
+  padding: 1px;
+  width: 250px;
+}
+/* main contents */
+main {
+  background-color: #303030;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 5px;
+}
+/* subheader section */
+main section.subheader {
+  padding: 0 40px;
+}
+main section.subheader ul,
+main section.subheader ul li {
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+}
+main section.subheader ul {
+  margin: 15px 0;
+}
+main section.subheader ul li a {
+  text-decoration: none;
+  color: #f9f9f9;
+  font-size: 15px;
+}
+main section.subheader ul.faq {
+  margin-left: 380px;
+}
+main section.subheader ul.faq li {
+  margin-left: 10px;
+}
+main article,
+main aside {
+  display: inline-block;
+  vertical-align: top;
+}
+main aside ul {
+  list-style: none;
+  padding-left: 0;
+}
+main aside ul li {
+  color: #f9f9f9;
+  width: 220px;
+  border-bottom: 1px dotted white;
+  padding: 5px 0;
+}
+main aside ul li.introduction {
+  padding-left: 5px;
+}
+main aside ul li > a {
+  color: #bd92e5;
+  text-decoration: none;
+}
+main article {
+  margin: 0 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 650px;
+}
+/* article section */
+main article section.article-header {
+  padding-left: 415px;
+}
+main article section.article-header ul {
+  margin: 0;
+  padding: 0;
+}
+main article section.article-header ul li {
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+main article section.article-header ul li a {
+  text-decoration: none;
+  color: #bd92e5;
+}
+main h1,
+main h3 {
+  padding: 15px 0;
+  border-bottom: 1px dotted black;
+}
+main ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+main p {
+  margin-bottom: 15px;
+}
+/* notes section */
+main article section.notes section.notes-header {
+  border-bottom: 1px dotted black;
+  margin-bottom: 20px;
+}
+main article section.notes section.notes-header h1 {
+  display: inline-block;
+  border-bottom: none;
+}
+main article section.notes section.notes-header span {
+  margin-left: 348px;
+  border-bottom: 1px solid blue;
+}
+main article section.notes section.notes-header span a {
+  text-decoration: none;
+  vertical-align: middle;
+  color: #807c7c;
+}
+main article section.notes section.notes-header span img {
+  width: 10px;
+}
+/* footer section */
+main footer {
+  padding-left: 30px;
+  text-align: start;
+  color: white;
+  margin-bottom: 10px;
+}
+main footer ul li {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  margin-left: 15px;
+}

@@ -1,0 +1,182 @@
+body {
+  background-image: linear-gradient(180deg, #d6e0e9 0%, #f4f7fc, #d6e0e9);
+}
+header {
+  text-align: center;
+  padding: 1rem 0;
+}
+header div section.title {
+  color: #181861;
+  margin-bottom: 0.5rem;
+}
+header div section.title h1 {
+  margin-bottom: 0.5rem;
+}
+header div section ul li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+.description {
+  background-color: white;
+  padding: 1rem;
+}
+.description span {
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+  background-image: url('ivana_funcion/photo_of_me.jpg');
+  background-position: 70%;
+  background-size: cover;
+  margin-bottom: 0.5rem;
+}
+.description h3,
+.description p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+}
+.logos {
+  background-color: white;
+  border: 2px solid #181861;
+  margin: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+.logos h3 {
+  margin-bottom: 0.5rem;
+}
+.logos li {
+  display: inline-block;
+  width: calc(100%/6);
+}
+.logos li img {
+  width: 100%;
+}
+.projects {
+  padding: 1rem;
+  background-image: linear-gradient(180deg, #cec7c3 0%, #f8f6f5 20% 80%, #cec7c3);
+}
+.projects h3,
+.projects p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+}
+.projects section {
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+}
+.projects section ul {
+  list-style: none;
+}
+footer {
+  text-align: center;
+  border-top: 1px solid #c2aaaa;
+  padding: 1rem;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  display: inline-block;
+  width: calc(100%/5);
+  margin-right: 1rem;
+}
+footer ul li a {
+  text-decoration: none;
+  text-wrap: wrap;
+}
+footer ul li a img {
+  height: 2rem;
+}
+@media only screen and (min-width: 481px) {
+  header span {
+    display: inline-block;
+    vertical-align: middle;
+    height: 250px;
+    width: 250px;
+    background-image: url('ivana_funcion/photo_of_me.jpg');
+    background-position: 70%;
+    background-size: cover;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  header div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .description span {
+    display: none;
+  }
+  .md-12 {
+    width: 90%;
+    margin: auto;
+  }
+  .logos {
+    border: none;
+    padding-top: 0;
+  }
+  .logos li {
+    display: inline-block;
+    width: calc(100%/9);
+  }
+  footer {
+    border-top: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header span {
+    display: none;
+  }
+  header {
+    background-image: url('ivana_funcion/photo_of_me.jpg');
+    height: 80vh;
+    background-position: 0% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  header div {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    padding: 2rem;
+    border: 3px solid #181861;
+  }
+  header div section.title {
+    color: white;
+  }
+  header div section.title h1 {
+    font-size: 3rem;
+  }
+  header div section.title h4 {
+    font-size: 1.5rem;
+  }
+  .lg-4 {
+    width: calc(100%/3);
+  }
+  .lg-9 {
+    width: calc(100%/4 * 3);
+    margin: auto;
+  }
+  .lg-6 {
+    width: 48%;
+    margin: auto;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .description,
+  .logos,
+  .projects {
+    background-color: transparent;
+    background-image: none;
+  }
+  .logos li {
+    display: inline-block;
+    width: calc(100%/5);
+  }
+  .logos,
+  .projects {
+    padding-top: 1rem;
+  }
+}

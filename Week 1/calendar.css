@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    border: 1px solid black;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 20px;
+    /* background-color: bisque; */
+}
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.box{
+    border: 3px solid black;
+    width: 150px;
+    height: 80px;
+    font-size: 25px;
+    display: inline-block;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 80px;
+    margin:15px;
+}
+span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.sun{
+    background-color: cornflowerblue;
+}
+.sat{
+    background-color: bisque;
+}
+.empty{
+    background-color: gainsboro;
+}

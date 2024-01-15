@@ -1,0 +1,28 @@
+section.text,
+section.photo{
+    width: 49.8%;
+    min-height: 19rem;
+    display: inline-block;
+    vertical-align: top;
+    text-align: start;
+    position: relative;
+}
+    section.text section{
+        width: 70%;
+        margin: auto;
+        padding-top: 1.5rem;
+    }
+        section.text section h1{
+            color: rgb(255,211,67);
+            font-size: 1.8rem;
+        }
+        section.text section p{
+            margin-top: 1.5rem;
+            color: rgb(209,215,211);
+            line-height: 1.5rem;
+        }
+    section.photo img{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }

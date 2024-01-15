@@ -1,0 +1,46 @@
+.parent-cont {
+  background-image: url('../assets/bg.png');
+  background-repeat: repeat;
+}
+header ul li {
+  background-color: #524a3b;
+}
+section {
+  background-color: #c84f00;
+}
+#underline {
+  display: inline-block;
+  width: 15rem;
+  border-bottom: 1px solid white;
+}
+article {
+  background-color: #f2e9d6;
+  position: relative;
+}
+article table {
+  width: 100%;
+}
+article table tbody td {
+  margin: 0.1rem !important;
+}
+#hashtag {
+  position: absolute;
+  left: -2rem;
+  background-color: #94700c;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+#hashtag a {
+  text-decoration: none;
+  color: white;
+}
+.supported {
+  background-color: #258533;
+}
+.notSupported {
+  background-color: #810000;
+}
+.production {
+  background-color: #94700c;
+}

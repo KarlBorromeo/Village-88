@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    text-transform: uppercase;
+}
+h3{
+    color: rgb(108, 65, 65);
+    text-align: center;
+    margin-bottom: 20px;
+}
+p{
+    line-height: 20px;
+}
+header{
+    padding: 30px;
+    padding-bottom: 0;
+}
+    header span{
+        display: inline-block;
+        height: 250px;
+        width: 250px;
+        background-image: url(ivana_funcion/photo_of_me.jpg);
+        background-position: 70%;
+        background-size: cover;
+    }
+    header div{
+        display: inline-block;
+        vertical-align: top;
+        text-align: start;
+        margin-left: 50px;
+    } 
+        header div section.title{
+            border-bottom: 2px solid rgb(24, 24, 97);
+            margin-top:30px;
+            padding-bottom: 30px;
+            padding-right: 100px;
+            color: rgb(24, 24, 97);
+            margin-bottom: 20px;
+        }
+            header div section h1{
+                font-size: 50px;
+            }
+            header div section ul{
+                display: inline-block;
+                margin: 0 10px;
+            }
+            header div section ul:first-child{
+                list-style: none;
+                margin-left: 0;
+            }
+
+.description{
+    margin: 10px 30px 0;
+    padding: 20px 20px 10px;
+    background-color: rgb(248, 246, 245);
+}
+    .description h3{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .description p{   
+        margin-bottom: 10px;
+    }
+
+
+.logos{
+    margin-left: 50px;
+}
+    .logos ul{
+        text-align: center;
+    }
+        .logos ul li{
+            list-style:none;
+            display: inline;
+            vertical-align: middle;
+        }
+            .logos ul li img{
+                width: calc(100%/6);
+            }
+
+.projects{
+    
+    padding: 20px;
+    background-image: linear-gradient(180deg, rgb(206, 199, 195) 0%,rgb(248, 246, 245)20% 80%,rgb(206, 199, 195));
+}
+    .projects section{
+        margin-bottom: 20px;
+    }
+    .projects ul{
+        padding-left: 15px;
+    }
+
+.logos,
+.projects{
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    padding-top: 10px;
+    margin-top: 20px;
+    height: 450px;
+}
+
+footer ul{
+    padding: 20px;
+    text-align: center;
+}
+    footer ul li{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+        footer ul li img{
+            width: 25px;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        footer ul li a{
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 100%;
+            margin-left: 3px;
+            color: black;
+        }
+            
