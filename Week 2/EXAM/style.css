@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+body{
+    padding: 1rem 2rem;
+}
+header img,
+header ul,
+header ul li{
+    display: inline-block;
+    vertical-align: middle;
+    list-style: none;
+}
+    header ul li{
+        margin-right: 1rem;
+    }
+    header ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    header ul li a#login-btn{
+        background-color: rgb(4,175,47);
+        color: white;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+    }
+div{
+    background-color: rgb(3,25,38);
+    height: 95vh;
+}
+    div section{
+        height: 100%;
+    }
+    div section#banner-img{
+        background-image: url('assets/banner.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    div section#title{
+        padding: 5rem;
+        text-align: center;
+        color:white;
+        height: 100%;
+    }
+        div section#title input{
+            width: 100%;
+            border-radius: 1rem;
+            padding: .5rem;
+            border:none;
+            outline: none;
+            margin: 1rem .5rem;
+        }
+h1,
+h1 span{
+    font-size: 3rem;
+}
+h1 span{
+    color: rgb(4,175,47);
+}
+#records{
+    background-color: rgb(3,25,38);
+    border-radius: .2rem;
+}
+    #records span{
+        margin-right: 3.5rem;
+    }
+    #records span section{
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+    }
+    #records h3,#records p{
+        margin: 0;
+    }
+div#ground{
+    background-color: rgb(3,25,38);
+    height: 75vh;
+    position: relative;
+}
+    div#ground section#bg-bottom{
+        background-image: url('assets/bg-bottom.png');
+        background-position:  0% 88%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    div#ground article{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+        div#ground article section{
+            padding: 2rem;
+        }
+            div#ground article section#banner2{
+                background-image: url('assets/coding-groundhero.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: 3rem;
+            }
+            div#ground article a{
+                text-decoration: none;
+                color: white;
+                background-color: rgb(4,175,47);
+                padding: .5rem 3rem;
+                font-weight: bold;
+            }
+            div#ground span{
+                background-color: rgb(4,175,47);
+                padding: .2rem .4rem;
+                font-weight: bold;
+            }
+                div#ground h1 span{
+                    background-color: transparent;
+                    font-weight: 500;
+                }
+footer#others{
+    background-color: rgb(251,251,253);
+    padding: 4rem 2rem;
+}
+    footer#others section{
+        background-color: rgb(191,228,245);
+        padding: 0;
+        margin-left: .5rem;
+    }
+        footer#others img{
+            width: 100%;
+        }
+        footer a{
+            text-decoration: none;
+            color: white;
+            border: 5px;
+            padding: .5rem 1rem;
+            border-radius: 5px; 
+        }
+        footer#others #mem-btn{
+            background-color: rgb(1,150,218);  
+        }
+        footer#others #team-btn{
+            background-color: rgb(244,111,20); 
+        }

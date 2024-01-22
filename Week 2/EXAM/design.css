@@ -1,0 +1,223 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+ul{
+    list-style: none;
+    padding: 1rem 5rem;
+}
+    ul li{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    ul li a{
+        text-decoration: none;
+        color: pink;
+        border: none;
+        outline: 1px solid pink;
+        padding: .5rem 1rem;
+        border-radius: .2rem;
+    }
+    ul li a#signup-btn{
+        background-color: rgb(226,27,112);
+        color: white;
+    }
+    ul li#logo{
+        margin-right: 35rem;
+    }
+    ul li select{
+        border: none;
+        text-align: center;
+    }
+#banner{
+    background-image: linear-gradient(180deg, #ebebeb 0%, #f7f7f7 3%, #f7f7f7);
+}
+    #banner-1,
+    #banner-2{
+        display: inline-block;
+        vertical-align: bottom;
+        height: 60vh;
+    }
+    #banner-1{
+        position: relative;
+        left: 3rem;
+        width: 55vw;
+        padding: 1rem 3rem;
+    }
+        #banner-1 h1{
+            margin-top: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            font-size: 2rem;
+        }
+        #banner form{
+            box-shadow: 0 0 2rem 2px rgb(201, 196, 196);
+            padding: 1rem;
+            border-radius: .5rem;
+        }
+            #banner form span{
+                display: inline-block;
+                vertical-align: middle;
+                width: 80%;
+                outline: 2px solid pink;
+                position: relative;
+                border-radius: .5rem;
+                background-color: white;
+            }
+                #banner form span input{
+                    width: 90%;
+                    border: none;
+                    padding: .5rem;
+                }
+                #banner form span button{
+                    border: none;
+                    position: absolute;
+                    right: .5rem;
+                    background-color: transparent;
+                    font-size: .8rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: pink;
+                }
+                #banner #shaded-btn{
+                    display: inline-block;
+                    vertical-align: middle;
+                    border: none;
+                    background-color: rgb(226,27,112);
+                    color: white;
+                    border-radius: .5rem;
+                    padding: .6rem .4rem;
+                    margin-left: .5rem;
+                    height: 100%;
+                    font-size: 1rem;
+                }
+    #banner-2{
+        position: relative;
+        right: -20px;
+        width: 43vw;
+        background-image: url('assets/banner.png');
+        background-position: 180px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+article{
+    padding: 0 3rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+    article h2{
+        margin-left: 1.2rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    article section{
+        text-align: center;
+    }
+        article section span{
+            display: inline-block;
+            width: calc(100%/4.4);
+            height: 200px;
+            margin: .5rem;
+            position: relative;
+        }
+            article section span img{
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+                object-position: bottom;
+                object-position: bottom;
+            }
+            article section span button{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                margin: .5rem;
+                padding: .2rem .4rem;
+                background-color: white;
+                border: none;
+                font-size: 1rem;
+            }
+        span,img,
+        article section span button{
+            border-radius: .5rem;
+        }
+footer{
+    margin: 4rem;
+    text-align: center;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid pink;
+    margin-bottom: 0;
+}
+    footer h2{
+        text-align: start;
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    footer section{
+        background-color: rgb(226,27,112);
+    }
+        footer section span{
+            display: inline-block;
+            vertical-align: middle;
+            width: 49%;
+        }
+        footer section span#details{
+            text-align: start;
+        }
+            #details{
+                color: white;
+                padding: 1rem;
+                text-align: start;
+                padding: 2rem 0 2rem 4rem;
+            }
+                #details img,
+                #details span{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                #details > img{
+                    width: 50px;
+                    outline: 1px solid white;
+                    outline-offset: .2rem;
+                    border-radius: 3px;
+                    margin-right: .5rem;
+                }
+                #details span{
+                    width: 400px;
+                    font-size: .8rem;
+                }
+                #details h3{
+                    margin: 1rem 0;
+                    font-weight: 500;
+                }
+                #details ul{
+                    margin-top: 1rem;
+                    padding: 0;
+                    list-style: none;
+                    text-align: start;
+                }
+                    #details ul li{
+                        display: inline-block;
+                        vertical-align: top;
+                    }
+                #details ul  li img{
+                   width: 100px;
+                }
+            #phone{
+                position: relative;
+            }
+                #phone img{
+                    position: absolute;
+                    left: 40%;
+                    top: 0;
+                    transform: translate(-60%, -65%);
+                    scale: .8;
+                }
+#last-logo{
+    margin-left: 4rem;
+    padding-top: .2rem;
+}
