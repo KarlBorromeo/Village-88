@@ -28,10 +28,7 @@
                     }
                     $('ul').append(tags); 
                     
-                    //rerender the even listener
-                    $('li').click(function(){                  
-                        $(this).hide();
-                    });
+                    
                 }
                 appendTags();
                 $('ul').after(`<button class="btn btn-primary mt-4">Reset Game</button>`);
@@ -41,6 +38,11 @@
                     $('ul').html('');                   
                     appendTags();
                 });
+                //rerender the even listener
+                $('ul').on('click','li',function(){   
+                        // alert('aw')              
+                        $(this).hide();
+                    });
             })
         </script>
     </head>
