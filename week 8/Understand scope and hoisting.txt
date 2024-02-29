@@ -1,0 +1,13 @@
+1. a really is 10
+2. a is 15
+   a really is 10
+3. error
+4. a is declared but hasn't been set to a specific value yet
+5. final is 25
+6. a is 15
+7. a is 15
+   a is 25
+8. a is 15
+   a is 15
+9. a is 15
+   a is 15
