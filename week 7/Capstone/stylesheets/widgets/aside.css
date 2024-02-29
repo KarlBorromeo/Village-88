@@ -1,0 +1,12 @@
+aside{
+    width: 6rem;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: inline-block;
+    text-align: center;
+    padding-top: 1rem;
+}
+aside > img, aside > span{
+    width: 3rem;
+}

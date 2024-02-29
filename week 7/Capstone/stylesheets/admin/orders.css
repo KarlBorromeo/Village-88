@@ -1,0 +1,156 @@
+body > div{
+    width: 100%;
+    position: relative;
+}
+main{
+    width: 100%;
+    padding: 2rem 4rem;
+    background-color: rgb(33,35,50);
+    min-height: 100vh;
+}
+main > form{
+    position: sticky;
+    display: inline-block;
+    top: 3.8rem;
+    z-index: 3;
+}
+main > form div,main > form a{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+h2{
+    position: fixed;
+    top: 4rem;
+    left: 17.5rem;
+    z-index: 2;
+    color: white!important;
+}
+h5{
+    color: white!important;
+}
+
+main > form input{
+    width: 23rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    background-color: rgb(65,63,101);
+    color: white;
+    border: none;
+}
+main > form input::placeholder{
+    color: white;
+    font-size: small;
+    padding-left: 1rem;
+}
+main > form button{
+    border:none;
+    background-color: transparent;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#categories{
+    padding: 0;
+}
+#categories li{
+    list-style: none;
+    background-color: rgb(44,47,65);
+    text-align: center;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
+    transition: all .3s ease-in;
+}
+#categories li:hover{
+    outline: 2px solid #7971D9;
+}
+#categories li a{
+    text-decoration: none;
+}
+#categories li p{
+    font-size: small;
+    margin-top: .5rem;
+    color: rgb(210,209,220);
+}
+#categories #pending{
+    color: rgb(237,198,121);
+}
+#categories #delivered{
+    color: rgb(128,208,121);
+}
+#all-orders{
+    width: 100%;
+}
+#all-orders table{
+    width: 100%;
+}
+#all-orders tbody tr{
+    background-color: rgb(44,47,65);
+    margin-bottom: 1rem!important;
+    padding-bottom: 1rem;
+}
+#all-orders p{
+    padding: 0;
+    margin: 0;
+}
+#all-orders thead{
+    color: #656882;
+    font-size: small;
+    text-align: center;
+}
+#all-orders thead th{
+    padding-bottom: 1rem;
+}
+#all-orders tbody td{
+    text-align: center;
+    color: #7E808E;
+    padding: 1rem;
+    border-bottom: 1px solid #656882;
+}
+#all-orders .receiver{
+    text-align: start;
+    padding-left: 2rem;
+}
+#all-orders .order-id{
+    color: #007bff;
+}
+#all-orders .highlight{
+    color: white;
+}
+#all-orders select{
+    border: 1px solid #EDC679;
+    background-color: transparent;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    color: white;
+}
+#all-orders select:focus{
+    box-shadow: 0 0 2px 1px white;
+}
+#all-orders select option{
+    color: black;
+}
+#edit-container{
+    position: absolute;
+}
+#pagination-container{
+    position: absolute;
+    background-color: transparent!important;
+    padding: .2rem;
+}
+#pagination-container td{
+    min-width: 0!important;
+    padding: 0!important;
+    border: none!important;
+    border: 1px solid #656882!important;
+    display: inline-block;
+}
+#pagination-container .pagination{
+    text-decoration: none;
+    color: white;
+    margin: 0!important;
+    padding: .2rem .5rem;
+    background-color: rgb(42,45,62);
+}

@@ -1,0 +1,123 @@
+body > div{
+    width: 100%;
+}
+main{
+    background-color: rgb(243,248,253);
+    padding: 3rem;
+    min-height: 110vh;
+    z-index: 1;
+}
+#search-form{
+    position: sticky;
+    top: 5px;
+    z-index: 2;
+    display: inline-block;
+}
+#search-form > div{
+    position: relative;
+    display: inline-block;
+    width: 25rem;
+}
+#search-form input{
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    width: 95%;
+}
+#search-form button{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#search-form a{
+    margin-left: 1rem;
+}
+#categories,#products{
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+}
+#categories{
+    padding-top: 1rem;
+    margin-right: 4rem;
+}
+#categories li{
+    font-size: small;
+    margin: 0;
+    display: block;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0 0 3px 1px rgb(215, 228, 240);
+    transition: all .3s ease-in-out;
+}
+#categories li a{
+    text-decoration: none;
+    color: black;
+}
+#categories li:hover{
+    box-shadow: 0px 3.17949px 11.9231px rgba(156, 137, 255, 0.45)
+}
+#categories li img{
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+#products{
+    width: 100%;
+    padding: 1rem;
+}
+#products a{
+    text-decoration: none!important;
+    color: black;
+}
+#products div{
+    padding: 1rem;
+    position: relative;
+}
+#products div > p{
+    padding: 0;
+    margin: 0;
+}
+#products li{
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 10px 3px rgb(215, 228, 240);
+    width: 250px;
+    height: 250px;
+}
+#products li:hover{
+    scale: 1.05;
+    box-shadow: 0px 3.17949px 11.9231px rgba(156, 137, 255, 0.45)
+}
+#products li img{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+#products li a > img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+#products div section p{
+    font-size: smaller;
+    display: inline;
+}
+#products span{
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    padding: .3rem 1rem;
+    border-radius: 1rem;
+    background-color: rgb(240,240,240);
+}

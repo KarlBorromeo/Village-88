@@ -1,0 +1,75 @@
+header{
+    height: 16vh;
+    background-image: url('../../assets/images/vegetable_bg_2.png');
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    padding: 0 4rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+header div p{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: small;
+}
+header div #profile{
+    border-radius: 100%;
+}
+#caret{
+    rotate: 180deg;
+    scale: .5;
+}
+#switch{
+    transition: all .3s ease-in;
+    color: #9C89FF;
+    padding: 1rem;
+}
+#switch:hover{
+    background-color: white;
+    text-decoration: underline;
+}
+.error{
+    color: red;
+    font-weight: 600;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+header > div{
+    position: relative;
+}
+header ul{
+    list-style: none;
+    padding: 0;
+    background-color: rgb(65,63,101);
+    position: absolute;
+    right: 0;
+    width: 50%;
+    top: 100%;
+    display: none;
+}
+header ul li{
+    color: rgb(128,115,197);
+}
+header ul li:hover{
+    background-color: white;
+    cursor: pointer;
+}
+header ul li a{
+    padding: .2rem 1rem;
+    text-decoration: none;
+    color: rgb(128,115,197);
+    width: 100%;
+    display: inline-block;
+}
+header li{
+    list-style: none;
+}
+header li img{
+    margin-right: .5rem;
+    height: 3rem;
+    border-radius: 100%;
+}
