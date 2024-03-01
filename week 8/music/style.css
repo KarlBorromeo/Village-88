@@ -1,0 +1,13 @@
+body{
+    height: 100vh;
+    border: 1px solid black;
+}
+body > div{
+    height: 30vh;
+}
+img{
+    height: 100%;
+}
+section{
+    /* border: 1px solid black; */
+}
