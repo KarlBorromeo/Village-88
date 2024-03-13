@@ -1,0 +1,7 @@
+button{
+    border: none;
+    background-color: rgb(0,123,255);
+    padding: .3rem .6rem;
+    box-shadow: 3px 3px 3px 1px black;
+    color: white;
+}

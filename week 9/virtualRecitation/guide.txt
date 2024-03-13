@@ -1,0 +1,91 @@
+1. Server render index.ejs
+
+2. Client: emits immediately after ready "joined"
+    <script>
+        $(document).ready(function(){
+            $('body').show();
+            socket.emit('joined");
+        })
+    </script>   
+
+3. Server: create inital connection
+    io.on('connection',function(socket){});
+
+4. Server: listens to "joined"
+    let history = '';
+    io.on('connection',function(socket){
+        socket.on('joined',function(){
+            const message = `<li>Socket ID <span> ${socket.id} </span> is present</li>`;
+            history += message;
+        })
+    });
+
+5. Client: listens to 'history'
+    <script>
+        $(document).ready(function(){
+            $('body').show();
+            socket.emit('joined");
+            socket.on('history,function(list){
+                $('ul').html(list);
+            })
+        })
+    </script>  
+
+6. Server: emits to all the 'history'
+    let history = '';
+    io.on('connection',function(socket){
+        socket.on('joined',function(){
+            const message = `<li>Socket ID <span> ${socket.id} </span> is present</li>`;
+            history += message;
+        })
+        io.emit('history',{history:history});
+    });
+
+7. Client emitting 'raisehand'
+    <script>
+        $(document).ready(function(){
+            $('body').show();
+            socket.emit('joined");
+            socket.on('history,function(list){
+                $('ul').html(list);
+            })
+            $('button').click(function(){
+                socket.emit('raisehand');
+            })
+        })
+    </script>  
+
+8. Server listening 'raisehand'
+    let history = '';
+    io.on('connection',function(socket){
+        socket.on('joined',function(){
+            const message = `<li>Socket ID <span> ${socket.id} </span> is present</li>`;
+            history += message;
+        })
+        io.emit('history',{history:history});
+        socket.on('raisehand',function(){
+            const message = `<li>Socket ID <span> ${socket.id} </span> raised hand!</li>`;
+            history += message;
+            io.emit('history',{history:history});
+        })
+    });
+
+9. Server listening when socket is disconnected
+    let history = '';
+    io.on('connection',function(socket){
+        socket.on('joined',function(){
+            const message = `<li>Socket ID <span> ${socket.id} </span> is present</li>`;
+            history += message;
+        })
+        io.emit('history',{history:history});
+        socket.on('raisehand',function(){
+            const message = `<li>Socket ID <span> ${socket.id} </span> raised hand!</li>`;
+            history += message;
+            io.emit('history',{history:history});
+        })
+        socket.on('disconnect',function(){
+            const message = `<li>Socket ID <span> ${socket.id} </span> left</li>`;
+            history += message;
+            io.emit('history',{history:history});
+        })
+    });  

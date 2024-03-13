@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+form,div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+label,input,select,textarea,section,a{
+    display: block;
+    margin-top: .2rem;
+}
+section{
+    margin-top: .5rem;
+}
+label{
+    margin-top: .5rem;
+}
+textarea{
+    resize: none;
+}
+input[type="submit"],a{
+    position: relative;
+    top: .5rem;
+    right: 0;
+    background-color: blue;
+    border: none;
+    border-radius: .2rem;
+    padding: .2rem .4rem;
+    color: white;
+    text-decoration: none;
+    display: inline;
+}
+.row{
+    display: flex;
+}
+.col-6{
+    display: inline-block;
+    width: 50%;
+}
+#ticket{
+    display: none;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Word Chat</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            let name = prompt('enter name');
+            if (!name) {
+                window.stop();
+                alert('User cancelled prompt. Further rendering stopped.')
+                throw new Error('User cancelled prompt. Further rendering stopped.');
+            }
+            $(document).ready(function(){
+                const socket = io();
+                socket.on('history', function(history){
+                    console.log(history);
+                    $('ul').html(history.chats)
+                    $('h1').html(history.word)
+                    $('ul').scrollTop($('ul')[0].scrollHeight);
+                });
+                $('form').submit(function(){
+                    let guess = $('input').val();
+                    $('input').val('')
+                    if(guess){
+                        socket.emit('guess-word',{name: name,guess:guess})                        
+                    }
+                    return false;
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div>
+            <h3>Guess the Word:</h3>
+            <h1>A_C_EFG</h1>
+            <ul>
+            </ul>
+            <form>
+                <input type="text" name="guess" placeholder="enter your guess word here">
+                <button>Submit</button>                
+            </form>
+        </div>
+    </body>
+</html>

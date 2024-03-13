@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://localhost:8002/stylesheets">
+        <title>AWARDS</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Details about <%= award.name %></h1>   
+            <img id="details-img" src="<%= award.img %>">  
+            <p>Date: <%= award.date %></p>    
+            <p>Awarded by: <%= award.awardedBy %></p>    
+            <p>Technologies</p>  
+            <ul>
+                <% for(let tech of award.technologies){%>
+                    <li><%= tech %></li>
+                <% } %>
+            </ul>  
+        </div>
+
+    </body>
+</html>

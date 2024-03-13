@@ -1,0 +1,89 @@
+1. render index.ejs
+2. prompt enter name. make the name global
+    <script>
+        name = prompt('enter name');    
+    </script>
+
+3. CLIent: listen the "history"
+    <script>
+        name = prompt('enter name');
+        socket.on('history', function(history){
+            // update chats html = history.chats
+            // update word html = history.word
+        });   
+    </script>
+
+4. Server: initiating first connection
+    io.on('connection',function(socket){})
+
+5. Server: create variable holder for history, emit the history to all users
+    let words: ['word1','word2','word3'];
+    let index = 0;
+    let history = {
+        word: words[index];
+        chats: [{}]
+    }
+    io.on('connection',function(socket){
+        io.emit('history',history);  
+    })
+    
+6. Client: emit guessing word event name "guess-word"
+    <script>
+        name = prompt('enter name');
+        socket.on('history', function(history){
+            // update chats html = history.chats
+            // update word html = history.word
+        });   
+        $('button').click(function(){
+            let guess = $('input').val();
+            socket.emit('guess-word',guess)
+        })
+    </script>
+
+7. Server: listens to even "guess-word"
+    let words: ['word1','word2','word3'];
+    let index = 0;
+    let history = {
+        word: words[index];
+        chats: ''
+    }
+    io.on('connection',function(socket){
+        io.emit('history',history); 
+        socket.on('guess-word',function(payload){       // payload{guess:'',name:''}
+            let chat += `<li><p><span class="name">${payload.name}:</span>${payload.guess}</p></li>`
+            history.chats += chat;
+            if(words[index] === payload.guess){
+                let notif = `<li><p class="correct">${payload.name} won! "${words[index]}" is the exact word!</p></li>`
+                history.chats += notif;
+                index++;
+            }
+            io.emit('history',history);
+        }) 
+    })
+
+8. Server: generate blanks of the words
+    let words: ['word1','word2','word3']; 
+    let index = 0;
+    let sensoredWord = createBlanks(words[index]);
+    let history = {
+        word: sensoredWord
+        chats: ''
+    }
+    io.on('connection',function(socket){
+        io.emit('history',history); 
+        socket.on('guess-word',function(payload){       // payload{guess:'',name:''}
+            let chat += `<li><p><span class="name">${payload.name}:</span>${payload.guess}</p></li>`
+            history.chats += chat;
+            if(words[index] === payload.guess){
+                let notif = `<li><p class="correct">${payload.name} won! "${words[index]}" is the exact word!</p></li>`
+                history.chats += notif;
+                index++;
+                sensoredWord = createBlanks(words[index]);
+                history.word = sensoredWord;
+            }
+            io.emit('history',history);
+        }) 
+    })
+    function createBlanks(word){
+        // modify the word here and return sensored word
+    }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet">
+    <title>Cinema</title>
+</head>
+<body>
+    <form class="d-flex flex-column gap-1" action="/create" method="POST" enctype="multipart/form-data">
+        <label>
+            Movie Title: <input type="text" name="title">
+        </label>
+        <label>
+            Movie Genre:
+            <select name="genre">
+                <option selected value="comedy">Comedy</option>
+                <option value="romance">Romance</option>
+                <option value="action">Action</option>
+            </select>
+        </label>
+        <label>
+            Wall Image:
+            <input type="file" name="img" multiple>
+        </label>
+        <input class="btn btn-primary" type="submit" value="Save">
+    </form>
+</body>
+</html>

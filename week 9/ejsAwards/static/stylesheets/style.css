@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(245, 240, 240);
+}
+.container{
+    margin: 2rem;
+    padding: 1rem;
+}
+.d-flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.alignt-center{
+    align-items: center;
+}
+.gap-2{
+    gap: 2rem;
+}
+.gap-1{
+    gap: 1rem;
+}
+.text-center{
+    text-align: center;
+}
+.border{
+    border: 1px solid black;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: scale .3s ease-in-out;
+    border-radius: .5rem;
+}
+img:hover{
+    scale: 1.1;
+}
+#details-img{
+    width: 250px;
+}
+p{
+    padding: 0;
+    margin: 0;
+    margin-bottom: .2rem;
+}

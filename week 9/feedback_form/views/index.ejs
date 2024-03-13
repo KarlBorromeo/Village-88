@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedback Form</title>
+        <link rel="stylesheet" href="http://localhost:8005/style.css">
+    </head>
+    <body>
+        <form action="/result" method="POST">
+            <h3>Feedback Form</h3>
+            <label>
+                Your Name (optional):
+                <input type="text" name="name">
+            </label>
+            <label>
+                Course Title:
+                <select name="course">
+                    <option value="PHP Track">PHP Track</option>
+                    <option selected  value="JS Track">JS Track</option>
+                    <option value="Elective">Elective</option>
+                </select>
+            </label>
+            <label>
+                Given Score (1-10):
+                <select name="score">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option selected value="10">10</option>
+                </select>
+            </label>
+            <label>
+                Reason:
+                <textarea rows="4" name="reason"></textarea>
+            </label>
+            <input type="submit">
+        </form>
+    </body>
+</html>

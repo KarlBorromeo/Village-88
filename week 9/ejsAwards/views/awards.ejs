@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://localhost:8002/stylesheets">
+        <title>AWARDS</title>
+    </head>
+    <body>
+        <h1 class="text-center">Achievements Unlocked</h1>
+        <div class="container d-flex justify-center gap-2">
+            <% for(let award of awards){ %>
+                <a href="/<%= award.id %>">
+                    <img src="<%= award.img %>"
+                </a>
+            <% } %>
+        </div>
+    </body>
+</html>
