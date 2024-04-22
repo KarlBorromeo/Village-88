@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedback Form</title>
+        <link rel="stylesheet" href="http://localhost:8005/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $.get('/fetchCars',function(res){
+                    $('span').html(res.length);
+                    let list = '';
+                    res.forEach(item => {
+                        list += `<li>${item.name} - ${item.year}</li>`
+                    });
+                    console.log(list);
+                    $('ul').html(list);
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h3>You did <%=visit%>x visiting this page.</h3>
+        <h3>You have <span></span> cars!</h3>
+        <h4>The cars in the database are as follows</h4>
+        <ul>
+        </ul>
+    </body>
+</html>

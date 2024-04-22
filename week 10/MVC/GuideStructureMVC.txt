@@ -1,0 +1,2 @@
+-app.js - main js file for running the application
+-routes.js - contains all the routes of the application
